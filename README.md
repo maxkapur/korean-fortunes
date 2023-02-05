@@ -67,6 +67,24 @@ $ fortune -f
     ...
 ````
 
+## Fish greeting
+
+I use a random Korean fortune as my greeting in the fish shell. The script `fish_greeting.fish`
+prints a fortune with a little bit of colorful styling. You can set this as your fish greeting
+by running, from the `korean-fortunes` directory
+
+````bash
+cp fish_greeting.fish ~/.config/fish/functions/fish_greeting.fish
+````
+
+(to copy), or
+
+````bash
+ln -s "$(pwd)/fish_greeting.fish" ~/.config/fish/functions/fish_greeting.fish
+````
+
+(to symlink).
+
 ## Hacker stuff
 
 See the `src/` directory for the HTML and Javascript used to make the `korean` fortune file.
