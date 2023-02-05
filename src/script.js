@@ -66,7 +66,11 @@ function extractQuotes() {
 // This function handles both cases.
 function processQuoteText(innerText) {
     split = innerText.split(":");
-    if (split.length > 1) {
+    if (
+        (split.length > 1) &&
+        // Some of the idioms have a trailing colon but *no* explanation
+        (split[1].trim().length > 0)
+    ) {
         return {
             text: split[0].trim(),
             explanation: endWithPeriod(split[1].trim())
@@ -81,6 +85,8 @@ function processQuoteText(innerText) {
 // Take a an idiom dictionary and augment it with its explanation.
 // This is for the idioms that have the explanation in a <dl><dd> element.
 function augmentExplanation(quote, newExplanation) {
+    // Some of the idioms have a <dl><dd> element but it is empty
+    if (newExplanation.trim().length < 1) { return; }
     newExplanation = endWithPeriod(newExplanation.trim());
     if (quote.explanation) {
         quote.explanation = quote.explanation + `\n` + newExplanation;
