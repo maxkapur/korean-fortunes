@@ -1,5 +1,8 @@
 # korean-fortunes
 
+[![en](https://img.shields.io/badge/lang-en-green.svg)](./README.md)
+[![ko](https://img.shields.io/badge/lang-ko-red.svg)](./README.ko.md)
+
 A collection of Korean idioms and their definitions, extracted from [Wikiquote](https://ko.wikiquote.org/wiki/%ED%95%9C%EA%B5%AD_%EC%86%8D%EB%8B%B4), for use with derivatives of the UNIX `fortune` program.
 
 ## Examples
@@ -21,7 +24,7 @@ $ fortune korean
     일의 끊고 맺음을 확실히 하지않고 슬그머니 얼버무리고 대강 지나갈 경우에 쓰는 말.
 ````
 
-Color-coded idioms as a fish greeting (`fish_greeting.fish`):
+Colorful idioms as a fish greeting (`fish_greeting.fish`):
 
 ![A screenshot of a fish prompt preceded by the output of the `fish_greeting.fish` script. The idiom is “한 번 엎지른 물은 다시 주워 담지 못한다” and its explanation is 한 번 지나간 일은 다시 돌이켜 회복할 수 없다는 말.](./example.png)
 
@@ -103,7 +106,7 @@ ln -s "$(pwd)/fish_greeting.fish" ~/.config/fish/functions/fish_greeting.fish
 See the `src/` directory for the HTML and Javascript used to make the `korean` fortune file.
 
 - `src/index.html` is the product of manually removing extraneous elements from the Wikiquote source (doing this with Emmet tools proved a more efficient use of time than scripting them out).
-- `src/script.js` attaches to `src/index.html`, scans the list into object representations (accounting for the source’s inconsistent formatting), and replaces the body with a `pre` element whose contents I copy-pasted to `korean`.
+- `src/script.js` attaches to `src/index.html`, scans the list into object representations (accounting for the source’s inconsistent formatting), formats the idioms for fortune, and replaces the body contents with a `pre` element containing the formatted idioms. I then copy-pasted this to the `korean` file.
 - The `korean.dat` file is created using `strfile -c % korean`.
 
 ## Legal stuff
