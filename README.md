@@ -21,7 +21,7 @@ $ fortune korean
 
 ## Installation
 
-For use with [fortune-mod](https://github.com/shlomif/fortune-mod) on Linux, all you need to do is get the files `korean` and `korean.dat` into your `usr/share/games/fortune` directory.
+For use with [fortune-mod](https://github.com/shlomif/fortune-mod) on Linux, all you need to do is get the files `korean` and `korean.dat` into your `/usr/share/games/fortune/` directory.
 
 On Fedora, you might use the following commands:
 
@@ -36,6 +36,18 @@ sudo cp -t /usr/share/games/fortune/ korean korean.dat
 # Remove the repo if you don't want it anymore
 cd ..
 rm -rf korean-fortunes
+````
+Or you could symlink from `/usr/share/games/fortune/` instead:
+
+````bash
+# Install fortune-mod, if you don't have it already
+sudo dnf install fortune-mod
+# Clone this repo and cd into its directory
+git clone https://github.com/maxkapur/korean-fortunes.git
+cd korean-fortunes
+# Symlink the data files into your fortunes source
+sudo ln -s "$(pwd)/korean" /usr/share/games/fortune/korean
+sudo ln -s "$(pwd)/korean.dat" /usr/share/games/fortune/korean.dat
 ````
 
 Now you should see `korean` listed in your fortune sources:
