@@ -3,7 +3,7 @@
 [![en](https://img.shields.io/badge/lang-en-green.svg)](./README.md)
 [![ko](https://img.shields.io/badge/lang-ko-red.svg)](./README.ko.md)
 
-korean-fortunes는 [위키인용집](https://ko.wikiquote.org/wiki/%ED%95%9C%EA%B5%AD_%EC%86%8D%EB%8B%B4)에서 추출한, UNIX의 `fortune` 프로그램 형식으로 맞춘 한글 속담 모음이다.
+korean-fortunes는 [위키인용집](https://ko.wikiquote.org/wiki/%EA%B0%80%EB%82%98%EB%8B%A4%EC%88%9C_%ED%95%9C%EA%B5%AD_%EC%86%8D%EB%8B%B4)에서 추출한, UNIX의 `fortune` 프로그램 형식으로 맞춘 한글 속담 모음이다.
 
 ## 예시
 

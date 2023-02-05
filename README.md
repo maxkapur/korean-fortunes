@@ -3,7 +3,7 @@
 [![en](https://img.shields.io/badge/lang-en-green.svg)](./README.md)
 [![ko](https://img.shields.io/badge/lang-ko-red.svg)](./README.ko.md)
 
-A collection of Korean idioms and their definitions, extracted from [Wikiquote](https://ko.wikiquote.org/wiki/%ED%95%9C%EA%B5%AD_%EC%86%8D%EB%8B%B4), for use with derivatives of the UNIX `fortune` program.
+A collection of Korean idioms and their definitions, extracted from [Wikiquote](https://ko.wikiquote.org/wiki/%EA%B0%80%EB%82%98%EB%8B%A4%EC%88%9C_%ED%95%9C%EA%B5%AD_%EC%86%8D%EB%8B%B4), for use with derivatives of the UNIX `fortune` program.
 
 ## Examples
 
