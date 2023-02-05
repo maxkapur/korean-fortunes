@@ -57,8 +57,11 @@ $ fortune -f
 
 ## Hacker stuff
 
-See the `/src/` directory for the HTML and Javascript used to make the `korean` fortune file.
-`index.html` is the product of manually removing extraneous elements from the Wikiquote source (doing this with Emmet tools proved a more efficient use of time than scripting them out). `script.js` attaches to `index.html`, scans the list into object representations (accounting for the source’s inconsistent formatting), and replaces the body with a `pre` element whose contents I copy-pasted to `korean`. The `korean.dat` file is created using `strfile -c % korean`.
+See the `src/` directory for the HTML and Javascript used to make the `korean` fortune file.
+
+- `src/index.html` is the product of manually removing extraneous elements from the Wikiquote source (doing this with Emmet tools proved a more efficient use of time than scripting them out).
+- `src/script.js` attaches to `src/index.html`, scans the list into object representations (accounting for the source’s inconsistent formatting), and replaces the body with a `pre` element whose contents I copy-pasted to `korean`.
+- The `korean.dat` file is created using `strfile -c % korean`.
 
 ## Legal stuff
 
