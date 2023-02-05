@@ -66,17 +66,15 @@ function extractQuotes() {
 // This function handles both cases.
 function processQuoteText(innerText) {
     split = innerText
-        .replace(": ", ":")
-        .replace(" :", ":")
         .split(":");
     if (split.length > 1) {
         return {
-            text: split[0],
-            explanation: split[1]
+            text: split[0].trim(),
+            explanation: split[1].trim()
         };
     } else {
         return {
-            text: innerText
+            text: innerText.trim()
         }
     }
 }
