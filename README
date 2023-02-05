@@ -1,0 +1,5 @@
+# korean-fortunes
+
+A collection of Korean idioms and their definitions, extracted from [Wikiquote](https://ko.wikiquote.org/wiki/%ED%95%9C%EA%B5%AD_%EC%86%8D%EB%8B%B4), for use with derivatives of the UNIX `fortune` program.
+
+By [Max Kapur](https://maxkapur.com).
