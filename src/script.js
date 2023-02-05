@@ -65,16 +65,15 @@ function extractQuotes() {
 // Others have "text: explanation" embedded inside an <li> element.
 // This function handles both cases.
 function processQuoteText(innerText) {
-    split = innerText
-        .split(":");
+    split = innerText.split(":");
     if (split.length > 1) {
         return {
             text: split[0].trim(),
-            explanation: split[1].trim()
+            explanation: endWithPeriod(split[1].trim())
         };
     } else {
         return {
-            text: innerText.trim()
+            text: endWithPeriod(innerText.trim())
         }
     }
 }
@@ -82,11 +81,18 @@ function processQuoteText(innerText) {
 // Take a an idiom dictionary and augment it with its explanation.
 // This is for the idioms that have the explanation in a <dl><dd> element.
 function augmentExplanation(quote, newExplanation) {
+    newExplanation = endWithPeriod(newExplanation.trim());
     if (quote.explanation) {
         quote.explanation = quote.explanation + `\n` + newExplanation;
     } else {
         quote.explanation = newExplanation
     }
+}
+
+// Appends a period to the end of the string if it doesn't have one already
+// Some of the explanations are missing a period
+function endWithPeriod(str) {
+    return str.substr(-1) == "." ? str : str + ".";
 }
 
 // Print the array of idioms as flat text for fortune.
