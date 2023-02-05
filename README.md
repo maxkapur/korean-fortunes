@@ -67,6 +67,11 @@ $ fortune -f
     ...
 ````
 
+Since the fortune source directory differs from distribution to distribution,
+you may need to modify the commands above. For example, Arch uses
+`/usr/share/fortune/` instead of `/usr/share/games/fortune/`. You can
+determine which directory fortune checks by running `fortune -f`.
+
 ## Fish greeting
 
 I use a random Korean fortune as my greeting in the fish shell. The script `fish_greeting.fish`
