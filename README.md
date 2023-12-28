@@ -55,8 +55,8 @@ sudo dnf install fortune-mod
 git clone https://github.com/maxkapur/korean-fortunes.git
 cd korean-fortunes
 # Symlink the data files into your fortunes source
-sudo ln -s "$(pwd)/korean" /usr/share/games/fortune/korean
-sudo ln -s "$(pwd)/korean.dat" /usr/share/games/fortune/korean.dat
+sudo ln -s (pwd)/korean" /usr/share/games/fortune/korean
+sudo ln -s "(pwd)/korean.dat" /usr/share/games/fortune/korean.dat
 ````
 
 Now you should see `korean` listed in your fortune sources:
@@ -96,7 +96,7 @@ cp fish_greeting.fish ~/.config/fish/functions/fish_greeting.fish
 (to copy), or
 
 ````bash
-ln -s "$(pwd)/fish_greeting.fish" ~/.config/fish/functions/fish_greeting.fish
+ln -s "(pwd)/fish_greeting.fish" ~/.config/fish/functions/fish_greeting.fish
 ````
 
 (to symlink).

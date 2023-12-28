@@ -56,8 +56,8 @@ sudo dnf install fortune-mod
 git clone https://github.com/maxkapur/korean-fortunes.git
 cd korean-fortunes
 # fortunes 디렉토리에서 데이터 파일로 가는 symlink 만들기
-sudo ln -s "$(pwd)/korean" /usr/share/games/fortune/korean
-sudo ln -s "$(pwd)/korean.dat" /usr/share/games/fortune/korean.dat
+sudo ln -s "(pwd)/korean" /usr/share/games/fortune/korean
+sudo ln -s "(pwd)/korean.dat" /usr/share/games/fortune/korean.dat
 ````
 
 이제 fortune 출처 목록에서 `korean`이 보이면 설치 완료된 상태이다.
@@ -91,7 +91,7 @@ cp fish_greeting.fish ~/.config/fish/functions/fish_greeting.fish
 혹은 스크립트를 복사하는 대신 symlink를 사용하려면 다음 명령어를 사용한다.
 
 ````bash
-ln -s "$(pwd)/fish_greeting.fish" ~/.config/fish/functions/fish_greeting.fish
+ln -s "(pwd)/fish_greeting.fish" ~/.config/fish/functions/fish_greeting.fish
 ````
 
 ## 해킹
@@ -107,4 +107,3 @@ ln -s "$(pwd)/fish_greeting.fish" ~/.config/fish/functions/fish_greeting.fish
 라이선스: MIT
 
 개발자: [Max Kapur](https://maxkapur.com).
-
